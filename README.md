@@ -12,7 +12,6 @@
 ```
 $uuid = "2cc4069d-ee87-4e41-95d7-7f42dfaf4e37";
 $class = new \Nonegrame\UuidToName\UuidToName();
-echo $class->uuidToName($uuid); // should echo a name
+echo $class->convertToName($uuid); // should echo a name
 ```
-
-## 製作中... 或許沒有完工的一天
+### ☠️☠️ 再次提醒, 無法保證產出的姓名碰撞機率高低 ☠️☠️

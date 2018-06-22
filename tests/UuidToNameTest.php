@@ -15,7 +15,7 @@ class UuidToNameTest extends \PHPUnit\Framework\TestCase
         $class = new UuidToName();
 
         // act
-        $class->uuidToName("hi");
+        $class->convertToName("hi");
 
         // assert
     }
@@ -23,12 +23,13 @@ class UuidToNameTest extends \PHPUnit\Framework\TestCase
     public function test_uuidToName_param_uuid()
     {
         // arrange
-
         $class = new UuidToName();
 
         // act
-        $class->uuidToName("6cbdd473-4ed4-4842-a439-811843c794a4");
+        $result = $class->convertToName("6cbdd473-4ed4-4842-a439-811843c794a4");
+        $result2 = $class->convertToName("6cbdd473-4ed4-4842-a439-811843c794a4");
 
         // assert
+        $this->assertSame($result, $result2);
     }
 }
